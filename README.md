@@ -1,4 +1,4 @@
-# Nerfies
+# 4DCardiac
 
 This is the repository that contains source code for the [4DCardiac website](https://kairaun.github.io/4DCardiac/).
 
