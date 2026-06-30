@@ -123,7 +123,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://github.com/kairaun/4DCardiac/tree/main/static/videos/vr_demo"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -143,7 +143,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://github.com/kairaun/4DGS-VR/tree/main/4DGaussians/data/dnerf/heart_cut_data2/Whole"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -175,6 +175,63 @@
     </div>
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Traditional mesh-based and volume rendering techniques often suffer from loss of internal
+            detail and insufficient real-time performance when visualizing dynamic organs such as the
+            beating heart. This study presents a virtual reality (VR) visualization system for the
+            dynamic heart based on 4D Gaussian Splatting (4DGS). An automated pipeline first extracts
+            spatially aligned multi-view datasets from medical volume data. To overcome the geometric
+            tearing that arises when 4DGS is applied to semi-transparent cardiac data, the time
+            dimension is frozen in the early training stage to build a stable canonical space,
+            decoupling geometry from deformation, while an isotropic constraint on the Gaussian aspect
+            ratio suppresses needle-like degeneration at its root. The optimized dynamic sequence is
+            then imported into a VR environment for real-time, interactive, multi-view inspection.
+            Compared with the original 4DGS, the proposed method consistently improves PSNR, SSIM, and
+            LPIPS while eliminating the secant artifacts on the dynamic surface, and sustains an average
+            of 88.8 FPS on a head-mounted display. These results advance dynamic medical visualization
+            and provide a high-fidelity foundation for future precision-medicine reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- VR Demo. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">VR Demo</h2>
+        <div class="content has-text-centered">
+          <video id="vr-demo-video"
+                 controls
+                 muted
+                 loop
+                 preload="auto"
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/vr_demo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ VR Demo. -->
+  </div>
+</section>
+
 
 <!--<!---->
 <!--<section class="hero is-light is-small">
