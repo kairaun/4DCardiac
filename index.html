@@ -185,33 +185,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Computed tomography (CT) resolves the beating heart as a dense, time-varying
-            volume, yet in the clinic it is still read mostly as stacks of 2D slices, leaving shape
-            and motion to the viewer's mental reconstruction. Immersive virtual reality (VR) is a
-            compelling alternative: stereoscopy and head tracking convey the spatial arrangement
-            of the chambers and the motion of a valve directly, an interactive 3D reading
-            increasingly explored for medical education, training, and surgical planning. Rendering
-            a moving organ this way is difficult: direct volume rendering cannot be baked once the
-            anatomy moves and spikes on close-up views, meshes discard interior structure, and
-            neural fields remain far from real time, which motivates an explicit, rasterizable
-            representation. 4D Gaussian Splatting (4DGS) fits, being real-time and engine-native,
-            but it reconstructs the organ as one inseparable point cloud, whereas anatomy
-            inspection wants to peel a valve away from the surrounding muscle. Static multi-layer
-            Gaussian work supplies that separation for a frozen scene, but it separates layers by
-            density thresholds and relies on layering economies that assume a still anatomy, and
-            cardiac soft tissues are neither density-separable nor still.
-          </p>
-          <p>
-            We present a dynamic, layered Gaussian system for the beating heart. A
-            self-implemented cinematic volumetric path tracer produces layer-separated, spatially
-            aligned multi-view data from segmented dynamic CT; each anatomical layer is
-            reconstructed as an independent 4D Gaussian model on a shared camera frame; and a
-            temporal model-swapping viewer plays the full cardiac cycle in VR with per-layer
-            toggling. Two of our findings are negative and shaped the design: unlike the static
-            case, dynamic layers can neither share a motion field nor be differentially encoded. We
-            also show that for small anatomical structures the standard full-image photometric
-            metrics are inflated by empty background, so we report foreground-masked quality: a
-            caution for how dynamic medical reconstruction is scored.
+            Computed tomography (CT) resolves the beating heart as a dense, time-varying volume, yet in the clinic it is still read mostly as stacks of 2D slices, leaving shape and motion to the viewer's mental reconstruction. Immersive virtual reality (VR) is a compelling alternative: stereoscopy and head tracking convey the spatial arrangement of the chambers and the motion of a valve directly, an interactive 3D reading increasingly explored for medical education, training, and surgical planning. Rendering a moving organ this way is difficult. Direct volume rendering cannot be baked once the anatomy moves and its cost spikes on close-up views, meshes discard interior structure, and neural fields remain far from real time, which motivates an explicit, rasterizable representation. 4D Gaussian Splatting (4DGS) fits, being real-time and engine-native, but it reconstructs the organ as one inseparable point cloud, whereas anatomy inspection wants to peel a valve away from the surrounding muscle. Static multi-layer Gaussian work supplies that separation for a frozen scene, but it separates layers by density thresholds and relies on layering economies that assume a still anatomy, and cardiac soft tissues are neither density-separable nor still. We present a dynamic, layered Gaussian system for the beating heart. A self-implemented cinematic volumetric path tracer produces layer-separated, spatially aligned multi-view data from segmented dynamic CT; each anatomical layer is reconstructed as an independent 4D Gaussian model on a shared camera frame; and a temporal model-swapping viewer plays the full cardiac cycle in VR with per-layer toggling. Two of our findings are negative and shaped the design: unlike the static case, dynamic layers can neither share a motion field nor be differentially encoded. We also show that for small anatomical structures the standard full-image photometric metrics are inflated by empty background, so we report foreground-masked quality: a caution for how dynamic medical reconstruction is scored.
           </p>
         </div>
       </div>
